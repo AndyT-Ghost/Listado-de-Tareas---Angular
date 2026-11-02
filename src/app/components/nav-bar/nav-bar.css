@@ -1,0 +1,35 @@
+
+.navbar{
+    display: inline-flex;
+    width: 100%;
+    height: auto;
+    background-color: #659477;
+    padding: 10px 20px;
+}
+
+.logo{
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 50px;
+    object-fit: contain;    
+}
+
+.enlace{
+    display: inline-flex;
+    align-items: center;
+    margin: 10px 10px;    
+    background-color: #F3F8F3;
+    border: 1px solid var(--gris);
+    border-radius: 10px;
+}
+
+.enlace a{    
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}

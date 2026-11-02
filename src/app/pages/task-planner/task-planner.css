@@ -1,0 +1,62 @@
+.mensaje{
+    margin: 0 0 15px 0;
+}
+
+.tareas-container{
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+}
+
+.tarea{
+    height: fit-content;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    height: 200px;
+}
+
+.tarea h4{    
+    width: fit-content;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 0 10px 0;
+    text-decoration: underline;
+    border-radius: 10px;
+    background-color: var(--primario);
+}
+
+.tarea label{
+    margin: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
+}
+
+.boton-primario{
+    display: flex;    
+    height: fit-content;
+    border: 1px solid --primario;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.completada, .prBaja{
+    color: green;
+    font-weight: bold;
+}
+
+.noCompletada, .prAlta{
+    color: red;
+    font-weight: bold;
+}
+
+.prMedia{
+    color: orange;
+    font-weight: bold;
+}
+

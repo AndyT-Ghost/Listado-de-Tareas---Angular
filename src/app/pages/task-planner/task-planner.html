@@ -1,0 +1,28 @@
+<app-encabezado [texto]="titulo + ' de '  + nombre"></app-encabezado>
+
+<div class="mensaje">
+    <button (click)="alternarDescripcion()" class="boton-primario">Mostrar/Ocultar descripción</button>
+    <p *ngIf="mostrarDescripcion">Lista de tareas del estudiante {{nombre}}</p>
+</div>
+
+<div class="tareas-container">
+    <div class="tarea" *ngFor="let tarea of tareas">
+        <div>
+        <h4>Tarea: #{{tarea.id}}</h4>
+        <label>{{tarea.materia}}</label><br>
+        <label>{{tarea.actividad}}</label><br>        
+        <label [ngClass]="tarea.completada ? 'completada' : 'noCompletada'">
+            {{tarea.completada ? 'Tarea finalizada' : 'Tarea no finalizada'}}
+        </label><br>
+        <label>Prioridad: <strong [ngClass]="{
+            'prAlta': tarea.prioridad === 'Alta',
+            'prMedia': tarea.prioridad === 'Media',
+            'prBaja': tarea.prioridad === 'Baja'
+            }">
+            {{tarea.prioridad}}</strong></label><br>
+        </div>
+        
+        <button (click)="cambiarEstado(tarea)" class="boton-primario">Cambiar estado</button>        
+    </div>
+    
+</div>
