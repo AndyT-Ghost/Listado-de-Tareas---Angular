@@ -10,5 +10,5 @@ import { Encabezado } from '../../components/encabezado/encabezado';
 })
 export class Cursos {
   titulo = 'Cursos actuales';
-  nombre = 'Andy Zurita';
+  nombre = 'Prueba';
 }

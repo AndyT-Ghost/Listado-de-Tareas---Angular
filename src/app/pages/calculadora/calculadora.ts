@@ -10,5 +10,5 @@ import { Encabezado } from '../../components/encabezado/encabezado';
 })
 export class Calculadora {
   titulo = 'Calcualdora estudiantil';
-  nombre = 'Andy Zurita'
+  nombre = 'Prueba'
 }

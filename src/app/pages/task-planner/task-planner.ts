@@ -20,7 +20,7 @@ interface Tarea{
 
 export class TaskPlanner {
   titulo = 'Listado de tareas';
-  nombre = 'Andy Zurita';
+  nombre = 'Prueba';
   mostrarDescripcion = true;
 
   tareas: Tarea[] = [
@@ -29,7 +29,7 @@ export class TaskPlanner {
     {id: 3, materia: 'Ingles y Cultura', actividad: 'Activides de plataforma', completada: false, prioridad: 'Media'},
     {id: 4, materia: 'Metodología de la Investigación', actividad: 'Investigación de Problemática', completada: true, prioridad: 'Baja'},
     {id: 5, materia: 'Desarrollo de Aplicaciones Web', actividad: 'Nivelación para Angular', completada: true, prioridad: 'Media'},
-    {id: 6, materia: 'Inteligencia de Negocios', actividad: 'Plataforma de BI', completada: false, prioridad: 'Media'},
+    {id: 6, materia: 'Inteligencia de Negocios', actividad: 'Plataforma de BI', completada: false, prioridad: 'Media'}
   ]
 
   cambiarEstado(tarea: Tarea){
