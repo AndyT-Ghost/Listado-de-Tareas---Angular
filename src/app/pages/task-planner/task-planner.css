@@ -16,7 +16,7 @@
     }
 }
 
-@media (min-width: 600px) and (max-width: 999px){
+@media (min-width: 500px) and (max-width: 999px){
     .tareas-container{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -28,13 +28,28 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 10px;
+    padding: 10px 10px 10px 15px;
     border: 1px solid #555;
     border-radius: 10px;
     height: 200px;
 }
 
-.tarea h4{    
+@media(max-width: 360px){
+    .tarea{
+        display: block;
+    }
+
+    .tarea button{        
+        margin-top: 10px;
+        justify-content: center;
+    }
+}
+
+.tarea-info{
+    height: auto;
+}
+
+.tarea-info h4{    
     width: fit-content;
     padding: 10px 10px 10px 10px;
     margin: 10px 0 10px 0;
@@ -43,15 +58,16 @@
     background-color: var(--primario);
 }
 
-.tarea label{
-    margin: 10px 0 10px 0;
-    padding: 10px 0 10px 0;
+.tarea-info label{
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .boton-primario{
     display: flex;    
     height: fit-content;
-    border: 1px solid --primario;
+    border: 1px solid var(--primario);
     border-radius: 10px;
     padding: 10px;
     cursor: pointer;

@@ -7,19 +7,19 @@
 
 <div class="tareas-container">
     <div class="tarea" *ngFor="let tarea of tareas">
-        <div>
+        <div class="tarea-info">
         <h4>Tarea: #{{tarea.id}}</h4>
-        <label>{{tarea.materia}}</label><br>
-        <label>{{tarea.actividad}}</label><br>        
+        <label>{{tarea.materia}}</label>
+        <label>{{tarea.actividad}}</label>       
         <label [ngClass]="tarea.completada ? 'completada' : 'noCompletada'">
             {{tarea.completada ? 'Tarea finalizada' : 'Tarea no finalizada'}}
-        </label><br>
+        </label>
         <label>Prioridad: <strong [ngClass]="{
             'prAlta': tarea.prioridad === 'Alta',
             'prMedia': tarea.prioridad === 'Media',
             'prBaja': tarea.prioridad === 'Baja'
             }">
-            {{tarea.prioridad}}</strong></label><br>
+            {{tarea.prioridad}}</strong></label>
         </div>
         
         <button (click)="cambiarEstado(tarea)" class="boton-primario">Cambiar estado</button>        
