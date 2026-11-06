@@ -11,11 +11,20 @@
     margin: 0;
     display: flex;
     align-items: center;
+    border-radius: 10px;
+    background: #F3F8F3;
 }
 
 .logo img{
     height: 50px;
     object-fit: contain;    
+}
+
+.logo label{
+    Max-width: 100px;
+    font-weight: bold;
+    font-size: 18px;
+    Margin: 0 10px;
 }
 
 .enlace{
