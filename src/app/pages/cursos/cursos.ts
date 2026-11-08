@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Encabezado } from '../../components/encabezado/encabezado';
+import { CommonModule } from '@angular/common';
 
 interface curso{
   id: number,
@@ -17,7 +18,7 @@ interface materia{
 
 @Component({
   selector: 'app-cursos',
-  imports: [Encabezado],
+  imports: [Encabezado, CommonModule],
   standalone: true,
   templateUrl: './cursos.html',
   styleUrl: './cursos.css',
@@ -64,4 +65,17 @@ export class Cursos {
       cursando: false
     }
   ]
+
+  cambiarEstado(cr: curso){
+    if(cr.cursado){
+      cr.cursado = false;
+      cr.cursando = false;
+    }else if(cr.cursando){
+      cr.cursando = false;
+      cr.cursado = true;
+    }else{
+      cr.cursando = true;
+      cr.cursado = false;
+    }   
+  }
 }

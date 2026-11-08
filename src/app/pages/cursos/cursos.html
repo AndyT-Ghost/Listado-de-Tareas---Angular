@@ -1,1 +1,21 @@
-<app-encabezado [texto]="titulo+' de '+nombre"></app-encabezado>
+<div class="cursos-container">
+    <div class="cursos">
+        <div class="curso" *ngFor="let curso of cursos">
+            <div class="curso-info">
+                <h4>Curso: {{curso.nombre}}</h4>
+                <label>Nivel: {{curso.nivel}}</label>
+                <label>Estado: <strong [ngClass]="(curso.cursado) ? 'cursado' :
+                (curso.cursando ? 'cursando' : 'noCursado')">{{
+                (curso.cursado) ? 'Cursado' :
+                (curso.cursando ? 'Cursando' : 'Aun no cursado') }}</strong></label> 
+                <button class="btn-cambiarEstado" (click)="cambiarEstado(curso)">Cambiar estado</button>               
+            </div>
+            <div class="curso-lista">
+                <h4>Materias del curso:</h4>
+                <ul>                    
+                    <li *ngFor="let materia of curso.materias">{{materia.nombre}}</li>
+                </ul>
+            </div>            
+        </div>
+    </div>
+</div>

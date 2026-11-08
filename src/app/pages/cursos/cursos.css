@@ -1,0 +1,94 @@
+.cursos-container, .cursos, .curso, .curso-info, .curso-lista{
+    height: auto;
+    width: 100%;
+}
+
+.cursos{
+    display: block;
+}
+
+.curso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    border: 1px solid var(--gris);
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px 15px;
+}
+
+@media (min-width: 400px){
+    .curso{
+        flex-direction: row;
+        align-items: start; 
+        justify-content: space-between;   
+    }
+
+    .curso-info, .curso-lista{
+        margin: 5px 50px;
+    }
+}
+
+.curso-info{
+    display: grid;
+    width: fit-content;    
+}
+
+.curso-info h4, .curso-lista h4{
+    height: fit-content;    
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+}
+
+.curso-info label{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    margin: 5px 0;
+}
+
+.curso-lista{
+    width: fit-content;  
+}
+
+.curso-lista ul{
+    margin: 10px 0;
+    padding: 5px 20px;
+}
+
+.curso-lista li{
+    margin: 5px 0;
+}
+
+.btn-cambiarEstado{
+    margin-top: 10px;
+    padding: 10px 20px;
+    width: fit-content;
+    border: 1px solid var(--primario);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cursado, .cursando, .noCursado{
+    color: white;    
+    border: 1px solid;    
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.cursado{    
+    background-color: green;
+    border-color: green;
+}
+
+.cursando{
+    background-color: orange;
+    border-color: orange;
+}
+
+.noCursado{
+    background-color: red;
+    border-color: red;
+}
